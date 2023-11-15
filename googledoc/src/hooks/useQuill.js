@@ -2,8 +2,6 @@ import { useCallback, useEffect, useState } from "react";
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
 
-const SAVE_INTERVAL_MS = 2000;
-
 const TOOLBAR_OPTIONS = [
   [{ header: [1, 2, 3, 4, 5, 6, false] }],
   ["font", "size", "bold", "italic", "underline", "strike", "blockquote"],

@@ -1,3 +1,6 @@
+const Document = require("../model/document");
+
+const defaultValue = "Welcome";
 const findOrCreateDocument = async (id) => {
   if (id == null) return;
 

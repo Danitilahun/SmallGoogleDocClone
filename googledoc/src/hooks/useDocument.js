@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-
+const SAVE_INTERVAL_MS = 2000;
 const useDocument = (socket, documentId, quill) => {
   useEffect(() => {
     if (socket == null) return;
