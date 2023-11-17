@@ -7,8 +7,8 @@ const documentSchema = new mongoose.Schema({
     required: true,
   },
   data: {
-    type: String,
-    default: "",
+    type: Object,
+    required: true,
   },
 });
 

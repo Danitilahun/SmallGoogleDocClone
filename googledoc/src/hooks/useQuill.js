@@ -14,10 +14,10 @@ const TOOLBAR_OPTIONS = [
   ["clean"],
 ];
 
-const useQuill = (wrapperRef) => {
+const useQuill = () => {
   const [quill, setQuill] = useState();
 
-  const initializeQuill = useCallback(() => {
+  const initializeQuill = useCallback((wrapperRef) => {
     if (wrapperRef == null) return;
 
     wrapperRef.innerHTML = "";
@@ -30,7 +30,7 @@ const useQuill = (wrapperRef) => {
     q.disable();
     q.setText("Loading...");
     setQuill(q);
-  }, [wrapperRef]);
+  }, []);
 
   return { quill, initializeQuill };
 };

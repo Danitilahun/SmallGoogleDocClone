@@ -2,7 +2,7 @@ import { useEffect } from "react";
 const SAVE_INTERVAL_MS = 2000;
 const useDocument = (socket, documentId, quill) => {
   useEffect(() => {
-    if (socket == null) return;
+    if (!socket || !quill) return;
 
     socket.once("load-document", (document) => {
       quill.setContents(document);
@@ -13,7 +13,7 @@ const useDocument = (socket, documentId, quill) => {
   }, [socket, documentId, quill]);
 
   useEffect(() => {
-    if (socket == null) return;
+    if (!socket || !quill) return;
 
     const interval = setInterval(() => {
       socket.emit("save-document", quill.getContents());
