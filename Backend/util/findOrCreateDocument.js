@@ -1,4 +1,4 @@
-const Document = require("../model/document");
+const Document = require("../model/Document");
 
 const defaultValue = "Welcome";
 const findOrCreateDocument = async (id) => {
