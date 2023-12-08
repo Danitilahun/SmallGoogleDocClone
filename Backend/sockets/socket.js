@@ -1,4 +1,4 @@
-const Document = require("../model/document");
+const Document = require("../model/Document");
 const findOrCreateDocument = require("../util/findOrCreateDocument");
 
 function configureSockets(io) {
